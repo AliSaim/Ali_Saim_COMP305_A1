@@ -48,6 +48,7 @@
      <Compile Include="Assets\_Scripts\IslandController.cs" />
      <Compile Include="Assets\_Scripts\LucianController.cs" />
      <Compile Include="Assets\_Scripts\OceanController.cs" />
+     <Compile Include="Assets\_Scripts\ZombieController.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

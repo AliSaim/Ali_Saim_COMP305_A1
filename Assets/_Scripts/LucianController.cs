@@ -29,6 +29,11 @@ public class LucianController : MonoBehaviour {
 		{
 			Debug.Log ("Island Hit!!!");
 		}
+
+		if (other.gameObject.CompareTag ("Zombie")) 
+		{
+			Debug.Log ("Zombie Hit!!!");
+		}
 	}
 
 }

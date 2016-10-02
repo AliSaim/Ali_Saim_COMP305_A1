@@ -22,7 +22,7 @@ public class OceanController : MonoBehaviour {
 	void Start () {
 	
 		this._transform = this.GetComponent<Transform> ();
-		this._speed = 2;
+		this._reset ();
 
 	}
 	
@@ -54,6 +54,7 @@ public class OceanController : MonoBehaviour {
 	//This methods reset the game object to the orginal position
 	private void _reset()
 	{
+		this._speed = 1;
 		this._transform.position = new Vector2 (0f, 480f);
 	}
 }

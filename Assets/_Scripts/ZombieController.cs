@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IslandController : MonoBehaviour {
+public class ZombieController : MonoBehaviour {
 	//PRIVATE INSTANCE VARIABLES +++++++++++++++++++
 	private int _speed;
 	private Transform _transform;
@@ -22,7 +22,7 @@ public class IslandController : MonoBehaviour {
 	void Start () {
 
 		this._transform = this.GetComponent<Transform> ();
-		this._speed = 1;
+		this._reset ();
 
 	}
 
@@ -54,6 +54,7 @@ public class IslandController : MonoBehaviour {
 	//This methods reset the game object to the orginal position
 	private void _reset()
 	{
-		this._transform.position = new Vector2 (Random.Range(-288f, 288f), 270);
+		this._speed = Random.Range(2,4);
+		this._transform.position = new Vector2 (Random.Range(-290f, 290f), 270);
 	}
 }
