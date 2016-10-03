@@ -8,8 +8,13 @@ public class LucianController : MonoBehaviour {
 
 
 	//PUBLIC INSTANCE VARIABLES(TESTING ONLY)
+	public GameController gameController;
+
+
+	[Header("Sounds")]
 	public AudioSource thunderSound;
 	public AudioSource yaySound;
+
 
 
 	// Use this for initialization
@@ -35,12 +40,14 @@ public class LucianController : MonoBehaviour {
 		{
 			Debug.Log ("Island Hit!!!");
 			this.yaySound.Play ();
+			this.gameController.ScoreValue += 100;
 		}
 
 		if (other.gameObject.CompareTag ("Zombie")) 
 		{
 			Debug.Log ("Zombie Hit!!!");
 			this.thunderSound.Play ();
+			this.gameController.LivesValue -= 1;
 		}
 	}
 
