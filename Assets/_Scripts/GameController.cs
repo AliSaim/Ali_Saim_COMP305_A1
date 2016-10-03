@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
 	//PRIVATE INSTANCE VARIABKES +++++++++++++++++++
 	private int _livesValue;
 	private int _scoreValue;
+	private AudioSource _endGameSound;
 
 
 	//PUBLIC INSTANCE VARIABLES (TESTING) ++++++++++
@@ -76,6 +77,9 @@ public class GameController : MonoBehaviour {
 
 		this.RestartButton.gameObject.SetActive (false);
 
+		this._endGameSound = this.GetComponent<AudioSource> ();
+
+
 		for (int zombieCount = 0; zombieCount < this.zombieNumber; zombieCount++) {
 			Instantiate (this.zombie);
 
@@ -101,6 +105,8 @@ public class GameController : MonoBehaviour {
 
 		this.lucain.SetActive (false);
 		this.island.SetActive (false);
+
+		this._endGameSound.Play ();
 	}
 
 
