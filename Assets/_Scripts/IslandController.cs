@@ -53,7 +53,7 @@ public class IslandController : MonoBehaviour {
 	//This methods reset the game object to the orginal position
 	private void _reset()
 	{
-		this._speed = 1;
+		this._speed = 2;
 		this._transform.position = new Vector2 (Random.Range(-288f, 288f), 270);
 	}
 }

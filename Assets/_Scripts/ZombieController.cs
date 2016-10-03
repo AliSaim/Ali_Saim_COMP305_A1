@@ -23,7 +23,6 @@ public class ZombieController : MonoBehaviour {
 
 		this._transform = this.GetComponent<Transform> ();
 		this._reset ();
-
 	}
 
 	// Update is called once per frame
@@ -54,7 +53,7 @@ public class ZombieController : MonoBehaviour {
 	//This methods reset the game object to the orginal position
 	private void _reset()
 	{
-		this._speed = Random.Range(2,4);
+		this._speed = Random.Range(3,6);
 		this._transform.position = new Vector2 (Random.Range(-290f, 290f), 270);
 	}
 }
