@@ -6,10 +6,16 @@ public class LucianController : MonoBehaviour {
 	//PRIVATE INSTANCE VARIABLES
 	private Transform _transform;
 
+
+	//PUBLIC INSTANCE VARIABLES(TESTING ONLY)
+	public AudioSource thunderSound;
+	public AudioSource yaySound;
+
+
 	// Use this for initialization
 	void Start () {
 		this._transform = this.GetComponent<Transform> ();
-	}
+		}
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,11 +34,13 @@ public class LucianController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Island")) 
 		{
 			Debug.Log ("Island Hit!!!");
+			this.yaySound.Play ();
 		}
 
 		if (other.gameObject.CompareTag ("Zombie")) 
 		{
 			Debug.Log ("Zombie Hit!!!");
+			this.thunderSound.Play ();
 		}
 	}
 
