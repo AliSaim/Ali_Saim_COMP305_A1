@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\BulletController.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\IslandController.cs" />
+     <Compile Include="Assets\_Scripts\LeftHandBulletController.cs" />
      <Compile Include="Assets\_Scripts\LucianController.cs" />
      <Compile Include="Assets\_Scripts\MunuController.cs" />
      <Compile Include="Assets\_Scripts\OceanController.cs" />

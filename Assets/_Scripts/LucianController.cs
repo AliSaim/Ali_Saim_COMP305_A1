@@ -41,10 +41,12 @@ public class LucianController : MonoBehaviour {
 			Debug.Log ("Island Hit!!!");
 			this.yaySound.Play ();
 			this.gameController.ScoreValue += 100;
+
 		}
 
 		if (other.gameObject.CompareTag ("Zombie")) 
 		{
+			
 			Debug.Log ("Zombie Hit!!!");
 			this.thunderSound.Play ();
 			this.gameController.LivesValue -= 1;
